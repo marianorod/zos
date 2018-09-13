@@ -12,6 +12,11 @@ import FileSystem from './utils/FileSystem'
 import Contracts from './utils/Contracts'
 import { sendTransaction, deploy } from './utils/Transactions'
 
+// validations
+import { getStorageLayout } from './validations/Storage';
+import { getBuildArtifacts } from './utils/BuildArtifacts';
+import { compareStorageLayouts } from './validations/Layout';
+
 // test behaviors
 import { behaviors, helpers } from './test'
 const assertions = helpers.assertions
@@ -37,6 +42,9 @@ export {
   behaviors,
   sendTransaction,
   deploy,
+  getBuildArtifacts,
+  getStorageLayout,
+  compareStorageLayouts,
   Proxy,
   Logger,
   FileSystem,
@@ -49,5 +57,5 @@ export {
   Package,
   Project,
   LibProject,
-  AppProject
+  AppProject,
 }
